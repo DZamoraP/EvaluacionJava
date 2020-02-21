@@ -1,4 +1,4 @@
-public class extends Lavadora {
+public class Lavadora extends Electrodomestico {
 	
 	private final static int CARGA= 5;
 

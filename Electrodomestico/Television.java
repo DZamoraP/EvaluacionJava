@@ -1,4 +1,4 @@
 
-public class extends Television {
+public class Television extends Electrodomestico {
 
 }
