@@ -11,7 +11,7 @@
  * @version 1.0
  */
 
-package Electrodomestico;
+package Electrodomesticos;
 
 public class Electrodomestico {
 	
@@ -72,8 +72,66 @@ public class Electrodomestico {
 		this.peso = PESO;
 	}
 	
-	
+	/**
+	 * Constructor por defecto.
+	 */
 		
+
+	public int getPrecioBase() {
+		return precioBase;
+	}
+
+
+	public void setPrecioBase(int precioBase) {
+		this.precioBase = precioBase;
+	}
+
+
+	public String getColor() {
+		return color;
+	}
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+	public String getConsumoEnergetico() {
+		return consumoEnergetico;
+	}
+
+
+	public void setConsumoEnergetico(String consumoEnergetico) {
+		this.consumoEnergetico = consumoEnergetico;
+	}
+
+
+	public int getPeso() {
+		return peso;
+	}
+
+
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+
+
+	public static int getPreciobase() {
+		return PRECIOBASE;
+	}
+
+
+
+
+
+	public static String getConsumoenergetico() {
+		return CONSUMOENERGETICO;
+	}
+
+
+
+
 
 	/**
 	 * Metodos de la Clase 
@@ -88,9 +146,9 @@ public class Electrodomestico {
 	}
 	
 	
-	public precioFinal() {
-		
-	}
+//	public precioFinal() {
+//		
+//	}
 
 		
 	
