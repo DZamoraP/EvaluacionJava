@@ -11,6 +11,12 @@ public class extends Lavadora {
 
 	int carga;
 	
+	
+	/**
+	 * Contructores
+	 */
+	
+	
 	public Electrodomestico(int carga) {
 		this.carga = CARGA;
 	
