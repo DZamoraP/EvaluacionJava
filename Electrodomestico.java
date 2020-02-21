@@ -73,7 +73,6 @@ public class Electrodomestico {
 		
 	}
 
-	
 	/**
 	 * Metodos de la Clase 
 	 */	
