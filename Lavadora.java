@@ -1,4 +1,3 @@
-
 public class extends Lavadora {
 	
 	private final static int CARGA= 5;
@@ -9,11 +8,10 @@ public class extends Lavadora {
  * Atributos por defecto.
  */
 
+
 	int carga;
 	
-	
 	public Electrodomestico(int carga) {
-		
 		this.carga = CARGA;
 	
 	
@@ -26,4 +24,5 @@ public class extends Lavadora {
 		
 	}
 
+	
 
