@@ -7,6 +7,7 @@ public class Electrodomestico {
 	private  final static String CONSUMOENERGETICO = "F";
 	private  final static int PESO = 5;
 	
+		// Creacion de Atributos 
 		int precioBase;
 		String color;
 		String consumoEnergetico;
