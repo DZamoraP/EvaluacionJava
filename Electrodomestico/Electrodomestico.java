@@ -31,7 +31,15 @@ public class Electrodomestico {
 		String consumoEnergetico;
 		int peso;
 		
+	/**
+	 * Constructor por defecto.
+	 */
+		
+	public Electrodomestico () {
 
+	}
+	
+	
 	 /**
      * Constructor con 4 parametros
      * @param precioBase  precio del electrodomestico
@@ -65,13 +73,7 @@ public class Electrodomestico {
 	}
 	
 	
-	/**
-	 * Constructor por defecto.
-	 */	
-	
-	public Electrodomestico () {
 		
-	}
 
 	/**
 	 * Metodos de la Clase 
@@ -85,7 +87,10 @@ public class Electrodomestico {
 		return color;
 	}
 	
-	public precioFinal():
+	
+	public precioFinal() {
+		
+	}
 
 		
 	
