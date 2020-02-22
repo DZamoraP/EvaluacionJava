@@ -15,7 +15,7 @@ public class Lavadora extends Electrodomestico {
 	 */
 	
 	
-	int carga;
+	private int carga;
 	
 		
 	/**
@@ -54,14 +54,14 @@ public class Lavadora extends Electrodomestico {
 	
 	
 	// MEtodo Calcula que la carga sea mayor o menor a 30
-	public int precioFinal(int precio){
+	public double precioFinal(double preciFinal){
 		int precioRetorno = 0;
 		if (carga>=30) {
 			precioRetorno = precioRetorno + 50;
 		}else if (carga<30) {
 			precioRetorno = precioRetorno + 0;
 		}
-		return precio;
+		return precioFinal(0);
 		
 	}
 

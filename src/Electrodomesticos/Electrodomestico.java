@@ -16,7 +16,7 @@ package Electrodomesticos;
 public class Electrodomestico {
 	
 	
-	private  final static int PRECIOBASE = 100;
+	private  final static double PRECIOBASE = 100;
 	private  final static String COLOR = "blanco";
 	private  final static String CONSUMOENERGETICO = "F";
 	private  final static int PESO = 5;
@@ -26,10 +26,10 @@ public class Electrodomestico {
 	 * Atributos
 	 */
 	
-		int precioBase;
-		String color;
-		String consumoEnergetico;
-		int peso;
+	private double precioBase;
+	private String color;
+	private String consumoEnergetico;
+	private int peso;
 		
 	 /**
      * Constructor por defect con 4 parametros
@@ -55,7 +55,7 @@ public class Electrodomestico {
  	* @param peso define el peso del electrodomestico en base a atributo constante
  	*/
 	
-	public Electrodomestico(int precioBase, int peso) {
+	public Electrodomestico(double precioBase, int peso) {
 		
 		this.precioBase = precioBase;
 		this.color = COLOR;
@@ -67,7 +67,7 @@ public class Electrodomestico {
 	 * Constructor con todos los atributos.
 	 */
 		
-	public Electrodomestico(int precioBase, String color, String consumoEnergetico, int peso) {
+	public Electrodomestico(double precioBase, String color, String consumoEnergetico, int peso) {
 		
 		this.precioBase = precioBase;
 		this.color = color;
@@ -82,7 +82,7 @@ public class Electrodomestico {
 	
 	
 	
-	public int getPrecioBase() {
+	public double getPrecioBase() {
 		return precioBase;
 	}
 
@@ -120,7 +120,7 @@ public class Electrodomestico {
 	}
 	
 	
-	public int precioFinal(int precio) {
+	public double precioFinal(double precio) {
 		return precio;
 	}
 
