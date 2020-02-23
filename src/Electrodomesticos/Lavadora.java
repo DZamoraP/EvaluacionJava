@@ -29,14 +29,14 @@ public class Lavadora extends Electrodomestico {
 	
 	
 	// constructor con precio y peso, el resto por defecto
-	public Lavadora(int precioBase, int peso) {
+	public Lavadora(double precioBase, int peso) {
 		super(precioBase, peso);
 		this.carga = CARGA;
 	
 	}
 	
 	// contructor con carga y resto heredados
-	public Lavadora(int precioBase, String color, String consumoEnergetico, int peso) {
+	public Lavadora(double precioBase, String color, char consumoEnergetico, int peso) {
 		super(precioBase, color, consumoEnergetico,peso);
 		this.carga = CARGA;
 	

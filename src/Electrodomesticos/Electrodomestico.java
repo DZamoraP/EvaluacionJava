@@ -13,12 +13,13 @@
 
 package Electrodomesticos;
 
+
 public class Electrodomestico {
 	
 	
 	private  final static double PRECIOBASE = 100;
 	private  final static String COLOR = "blanco";
-	private  final static String CONSUMOENERGETICO = "F";
+	private  final static char CONSUMOENERGETICO = 'F';
 	private  final static int PESO = 5;
 	
 		
@@ -28,7 +29,7 @@ public class Electrodomestico {
 	
 	private double precioBase;
 	private String color;
-	private String consumoEnergetico;
+	private char consumoEnergetico;
 	private int peso;
 		
 	 /**
@@ -67,7 +68,7 @@ public class Electrodomestico {
 	 * Constructor con todos los atributos.
 	 */
 		
-	public Electrodomestico(double precioBase, String color, String consumoEnergetico, int peso) {
+	public Electrodomestico(double precioBase, String color, char consumoEnergetico, int peso) {
 		
 		this.precioBase = precioBase;
 		this.color = color;
@@ -95,7 +96,7 @@ public class Electrodomestico {
 
 
 
-	public String getConsumoEnergetico() {
+	public char getConsumoEnergetico() {
 		return consumoEnergetico;
 	}
 
@@ -111,9 +112,19 @@ public class Electrodomestico {
 	 * Metodos de la Clase 
 	 */	
 	
-	public String comprobarConsumoEnergetico(String letra){
-		return letra;
+	public boolean comprobarConsumoEnergetico(char letra){
+		char consumo = Character.toUpperCase(letra);
+		
+		if (consumo>='A' && consumo<='F') {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
+	
+
+
 	
 	public String comprobarColor(String color) {
 		return color;
@@ -121,6 +132,7 @@ public class Electrodomestico {
 	
 	
 	public double precioFinal(double precio) {
+	
 		return precio;
 	}
 
