@@ -21,6 +21,10 @@ public class Lavadora extends Electrodomestico {
 	/**
 	 * Contructores por defecto
 	 */
+	
+	public Lavadora() {
+		
+	}
 		
 	public Lavadora(int carga) {
 		super();
@@ -36,9 +40,9 @@ public class Lavadora extends Electrodomestico {
 	}
 	
 	// contructor con carga y resto heredados
-	public Lavadora(double precioBase, String color, char consumoEnergetico, int peso) {
+	public Lavadora(double precioBase, String color, char consumoEnergetico, int peso, int carga) {
 		super(precioBase, color, consumoEnergetico,peso);
-		this.carga = CARGA;
+		this.carga = carga;
 	
 	}
 	
@@ -54,14 +58,19 @@ public class Lavadora extends Electrodomestico {
 	
 	
 	// MEtodo Calcula que la carga sea mayor o menor a 30
-	public double precioFinal(double preciFinal){
+	public double precioFinal(){
 		int precioRetorno = 0;
 		if (carga>=30) {
+			System.out.println("Entro a lavadora Carga mayor a 30 kl");
 			precioRetorno = precioRetorno + 50;
+			System.out.println("Aumento: " + precioRetorno);
 		}else if (carga<30) {
+			System.out.println("Entro a lavadora Carga menor a 30 kl");
 			precioRetorno = precioRetorno + 0;
+			System.out.println("Aumento: " + precioRetorno);
 		}
-		return precioFinal(0);
+		
+		return precioRetorno;
 		
 	}
 

@@ -136,31 +136,53 @@ public class Electrodomestico {
 	}
 	
 	
-	public double precioFinal(double precioFinal) {
+	public double precioFinal() {
 		double precio  = 0;
 		if (consumoEnergetico == 'A') {
-			precio = precio + 100;
+			System.out.println("Entro al A");
+			precio += 100;
+			System.out.println("Aumento:" + precio);
 		}else if (consumoEnergetico == 'B') {
-			precio = precio + 80;
+			System.out.println("Entro al B");
+			precio += 80;
+			System.out.println("Aumento:" + precio);
 		}else if (consumoEnergetico == 'C') {
-			precio = precio + 60;
+			System.out.println("Entro al C");
+			precio += 60;
+			System.out.println("Aumento:" + precio);
 		}else if (consumoEnergetico == 'D') {
-			precio = precio + 50;
+			System.out.println("Entro al D");
+			precio += 50;
+			System.out.println("Aumento:" + precio);
 		}else if (consumoEnergetico == 'E') {
-			precio = precio + 30;
+			System.out.println("Entro al E");
+			precio += 30;
+			System.out.println("Aumento:" + precio);
 		}else if (consumoEnergetico == 'F') {
-			precio = precio + 10;
-		} else if (peso >0 && peso <19) {
-			precio = precio + 10;
-		} else if (peso >20 && peso <49) {
-			precio = precio + 50;
-		} else if (peso >50 && peso <79) {
-			precio = precio + 80;
-		} else if (peso>=80) {
-			precio = precio + 100;
+			System.out.println("Entro al F");
+			precio += 10;
+			System.out.println("Aumento:" + precio);
 		}
 		
-		return precio;
+		if (peso >=0 && peso <=19) {
+			precio +=  10;
+			System.out.println("Entro al Peso menor a 19");
+			System.out.println("Aumento:" + precio);
+		} else if (peso >=20 && peso <=49) {
+			System.out.println("Entro al peso entre 20  - 49");
+			precio += 50;
+			System.out.println("Aumento:" + precio);
+		} else if (peso >=50 && peso <=79) {
+			System.out.println("Entro al peso entre 50 y 79");
+			precio += 80;
+			System.out.println("Aumento:" + precio);
+		} else if (peso>=80) {
+			System.out.println("Entro al peso entre 80 y mayores");
+			precio += 100;
+			System.out.println("Aumento:" + precio);
+		}
+		
+		return precioBase + precio;
 	}
 
 	

@@ -13,14 +13,18 @@ public class Television extends Electrodomestico {
 	
 	// contrutores
 	
-	public Television(int precioBase, String color, String consumoEnergetico, int peso ) {
+	public Television() {
+		
+	}
+	
+	public Television(double precioBase, String color, String consumoEnergetico, int peso ) {
 		super();
 		this.resolucion = 	RESOLUCION;
 		this.tdt = TDT;
 	}
 	
 	
-	public Television(int precioBase, int peso) {
+	public Television(double precioBase, int peso) {
 		super(precioBase, peso);
 		this.resolucion = 	RESOLUCION;
 		this.tdt = TDT;
