@@ -47,17 +47,20 @@ public class Television extends Electrodomestico {
 	
 	// El metododo
 	
-	public double precioFinal(double precioFinal) {
+	public double precioFinal() {
 		double preBase = 0;
-		if (resolucion>40 && tdt) {
-			
-			preBase = preBase + (getPrecioBase() * 0.3);
-			preBase = preBase + 50;
-				
+		if (resolucion>40)  {
+			System.out.println(getPrecioBase());
+			preBase+= super.getPrecioBase() * 1.3;
+			System.out.println("Entro a pulgadas > 40: "+ preBase);
+		}
+		if (tdt==true) {
+			preBase+= 50;
+			System.out.println("Entro TDF verdadero " + preBase);
 		}
 
 		
-		return precioFinal;
+		return preBase;
 	}
 
 	@Override

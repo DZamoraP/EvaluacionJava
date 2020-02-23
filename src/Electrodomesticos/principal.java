@@ -6,24 +6,37 @@ public class principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Electrodomestico listaElectro[] = new Electrodomestico[3];
+		Electrodomestico listaElectro[] = new Electrodomestico[10];
 	
+		// Datos Electrodimesticos:
+		// Precio Base, Color, Consumo Energetico, Peso
+		listaElectro[0]= new Electrodomestico(10,"negro",'A',18);
+		listaElectro[1]= new Electrodomestico(40,"blanco",'C',25);
+		listaElectro[2]= new Electrodomestico(60,"rojo",'E',60);
 		
-		listaElectro[0]= new Electrodomestico(10,"negro",'A',19);
-		listaElectro[1]= new Lavadora(100, "rosa", 'A', 19, 31);
-		listaElectro[2]= new Television(40, "negro", 'A', 31, 20, true);
-//		
+		// Precio Base, Peso, otros datos por defecto
+		listaElectro[3]= new Electrodomestico(60, 50 );
+		
+		
+		// Datos Lavadora:
+		// Precio Base, Color, Consumo Energetico, Peso, Carga.
+		listaElectro[4]= new Lavadora(100, "blanco", 'A', 19, 32);
+		listaElectro[5]= new Lavadora(60, "rojo", 'D', 40, 8);
+		
+		// Precio Base, Peso , otros por defecto
+		listaElectro[6]= new Lavadora(140, 30); 
 
-//		listaElectro[3]= new Television(80, false);
-//		listaElectro[4]= new Electrodomestico(100,"negro",'C',60);
-//		listaElectro[5]= new Electrodomestico(100,"rojo",'E',18);
-//		listaElectro[6]= new Electrodomestico(100,"azul",'D',100);
-//		listaElectro[7]= new Electrodomestico(100,"negro",'F',80);
-//		listaElectro[8]= new Electrodomestico(100,"blanco",'E',49);
-//		listaElectro[9]= new Electrodomestico(80,"gris",'F',100);
-//		
 	
+			
+		// Datos Television:
+		// Precio Base, Color, Consumo Energetico, Peso,  Resolucion en Pulgadas, Sintonizador TDT.
+		listaElectro[7]= new Television(45, "negro", 'A', 41, 61, true);
+		listaElectro[8]= new Television(40, "negro", 'C', 31, 41, true);
 		
+		// Precio Base, Peso , otros por defecto
+		listaElectro[9]= new Television(150, 20);
+	
+	
 		for (int i=0; i<listaElectro.length;i++) {
 			System.out.println(listaElectro[i]);
 		}
@@ -36,24 +49,30 @@ public class principal {
         
         for(int i=0;i<listaElectro.length;i++){
          
-        	// Objeto 			intanceof	Clase
+        	// Objeto 			intanceof	     Clase
  
             if(listaElectro[i] instanceof Electrodomestico){
-            	//double suma = electro.getPrecioBase();
-            	//System.out.println("Muestro getPrecio" + electro.getPrecioBase());
                 precioTotalElectro+=listaElectro[i].precioFinal();
+                System.out.println("El Precio Electrodomestico: " + precioTotalElectro);
+                
             }
             if(listaElectro[i] instanceof Lavadora){
                 precioTotalLava+=listaElectro[i].precioFinal();
+                System.out.println("El Precio de la Lavadora: " + precioTotalElectro);
             }
             
             if(listaElectro[i] instanceof Television){
                 precioTotalTele+=listaElectro[i].precioFinal();
+                System.out.println("El Precio del Television: " + precioTotalElectro);
             }
         }
-        System.out.println("El precio de los electrodomesticos es de " + precioTotalElectro);
-        System.out.println("El precio de las lavadoras es de "+ precioTotalLava);
-        System.out.println("La suma del precio de las televisiones es de "+precioTotalTele);
+        
+        
+        
+        // Visualizar la suma total de los electrodomesticos
+        System.out.println("El precio total de los electrodomesticos es de " + precioTotalElectro);
+        System.out.println("El precio total de las lavadoras es de "+ precioTotalLava);
+        System.out.println("El precio total de las televisiones es de "+precioTotalTele);
  
     }
 		
