@@ -125,16 +125,48 @@ public class Electrodomestico {
 	
 
 
-	
-	public String comprobarColor(String color) {
-		return color;
+	public boolean comprobarColor(String color) {
+		color.toLowerCase();
+		switch (color.toLowerCase()){
+		case "blanco": return true;
+		case "negro": return true;
+		case "rojo": return true;
+		case "azul": return true;
+		case "gris": return true;
+		default : return false;
+		}
+		
 	}
 	
 	
-	public double precioFinal(double precio) {
+	public double precioFinal(double precioFinal) {
+		double precio  = 0;
+		if (consumoEnergetico == 'A') {
+			precio = precio + 100;
+		}else if (consumoEnergetico == 'B') {
+			precio = precio + 80;
+		}else if (consumoEnergetico == 'C') {
+			precio = precio + 60;
+		}else if (consumoEnergetico == 'D') {
+			precio = precio + 50;
+		}else if (consumoEnergetico == 'E') {
+			precio = precio + 30;
+		}else if (consumoEnergetico == 'F') {
+			precio = precio + 10;
+		} else if (peso >0 && peso <19) {
+			precio = precio + 10;
+		} else if (peso >20 && peso <49) {
+			precio = precio + 50;
+		} else if (peso >50 && peso <79) {
+			precio = precio + 80;
+		} else if (peso>=80) {
+			precio = precio + 100;
+		}
+		
 		return precio;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Electrodomestico [precioBase=" + precioBase + ", color=" + color + ", consumoEnergetico="
