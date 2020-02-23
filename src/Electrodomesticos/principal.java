@@ -1,6 +1,8 @@
 package Electrodomesticos;
 
 public class principal {
+	
+	Electrodomestico electro = new Electrodomestico();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,6 +18,8 @@ public class principal {
 		for (int i=0; i<arreglo.length;i++) {
 			System.out.println(arreglo[i]);
 		}
+		
+		
 		
 		
 		

@@ -112,29 +112,26 @@ public class Electrodomestico {
 	 * Metodos de la Clase 
 	 */	
 	
-	public boolean comprobarConsumoEnergetico(char letra){
-		char consumo = Character.toUpperCase(letra);
-		
-		if (consumo>='A' && consumo<='F') {
-			return true;
+	public char comprobarConsumoEnergetico(char letra){
+		Character.toUpperCase(letra);
+		if (letra!='A' && letra!='F') {
+			return CONSUMOENERGETICO;
 		}
 		else {
-			return false;
+			return letra;
 		}
 	}
 	
 
 
-	public boolean comprobarColor(String color) {
-		color.toLowerCase();
-		switch (color.toLowerCase()){
-		case "blanco": return true;
-		case "negro": return true;
-		case "rojo": return true;
-		case "azul": return true;
-		case "gris": return true;
-		default : return false;
+	public String comprobarColor(String color) {
+		if (!color.equals("blanco") &&  !color.equals("negro") && !color.equals("rojo") && !color.equals("azul") 
+				&& !color.equals("gris")) {
+			return COLOR;
+		} else {
+			return color;
 		}
+				
 		
 	}
 	
