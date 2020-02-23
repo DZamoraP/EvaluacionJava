@@ -132,7 +132,6 @@ public class Electrodomestico {
 	
 	
 	public double precioFinal(double precio) {
-	
 		return precio;
 	}
 
