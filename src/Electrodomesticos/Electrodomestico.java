@@ -124,6 +124,12 @@ public class Electrodomestico {
 		return precio;
 	}
 
-		
+	@Override
+	public String toString() {
+		return "Electrodomestico [precioBase=" + precioBase + ", color=" + color + ", consumoEnergetico="
+				+ consumoEnergetico + ", peso=" + peso + "]";
+	}
+
+	
 	
 }

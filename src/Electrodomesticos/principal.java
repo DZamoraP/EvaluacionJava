@@ -17,7 +17,7 @@ public class principal {
 			System.out.println(arreglo[i]);
 		}
 		
-
+		
 		
 	}
 
