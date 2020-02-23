@@ -57,7 +57,7 @@ public class Lavadora extends Electrodomestico {
 	
 	
 	
-	// MEtodo Calcula que la carga sea mayor o menor a 30
+	// Metodo Calcula que la carga sea mayor o menor a 30
 	public double precioFinal(){
 		int precioRetorno = 0;
 		if (carga>=30) {
@@ -73,6 +73,16 @@ public class Lavadora extends Electrodomestico {
 		return precioRetorno;
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Lavadora: carga=" + carga + ", Precio Base=" + getPrecioBase() + ", Color= " + getColor() + ", Consumo Energetico="
+				+ getConsumoEnergetico() + ", Peso=" + getPeso();
+	}
+
+
+	
+	
 
 }
 

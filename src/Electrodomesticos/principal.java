@@ -16,7 +16,7 @@ public class principal {
 	
 		
 		listaElectro[0]= new Electrodomestico(10,"negro",'A',19);
-		listaElectro[1]= new Lavadora(100, "negro", 'A', 19, 31);
+		listaElectro[1]= new Lavadora(100, "rosa", 'A', 19, 31);
 	
 
 //		listaElectro[2]= new Television(250, 70);
