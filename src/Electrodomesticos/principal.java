@@ -6,21 +6,14 @@ public class principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Electrodomestico electro = new Electrodomestico();
-	
-		Television tele = new Television();
-		
-		
-
-		Electrodomestico listaElectro[] = new Electrodomestico[2];
+		Electrodomestico listaElectro[] = new Electrodomestico[3];
 	
 		
 		listaElectro[0]= new Electrodomestico(10,"negro",'A',19);
 		listaElectro[1]= new Lavadora(100, "rosa", 'A', 19, 31);
-	
-
-//		listaElectro[2]= new Television(250, 70);
+		listaElectro[2]= new Television(40, "negro", 'A', 31, 20, true);
 //		
+
 //		listaElectro[3]= new Television(80, false);
 //		listaElectro[4]= new Electrodomestico(100,"negro",'C',60);
 //		listaElectro[5]= new Electrodomestico(100,"rojo",'E',18);
@@ -54,13 +47,13 @@ public class principal {
                 precioTotalLava+=listaElectro[i].precioFinal();
             }
             
-//            if(listaElectro[i] instanceof Television){
-//                sumaTelevisiones+=listaElectro[i].precioFinal(sumaLavadoras);
-//            }
+            if(listaElectro[i] instanceof Television){
+                precioTotalTele+=listaElectro[i].precioFinal();
+            }
         }
-        System.out.println("La suma del precio de los electrodomesticos es de " + precioTotalElectro);
-        System.out.println("La suma del precio de las lavadoras es de "+ precioTotalLava);
-//        System.out.println("La suma del precio de las televisiones es de "+sumaTelevisiones);
+        System.out.println("El precio de los electrodomesticos es de " + precioTotalElectro);
+        System.out.println("El precio de las lavadoras es de "+ precioTotalLava);
+        System.out.println("La suma del precio de las televisiones es de "+precioTotalTele);
  
     }
 		

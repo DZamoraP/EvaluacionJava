@@ -13,16 +13,11 @@ public class Television extends Electrodomestico {
 	
 	// contrutores
 	
-	public Television() {
-		
-	}
-	
-	public Television(double precioBase, String color, String consumoEnergetico, int peso ) {
+	public Television(int resolucion, boolean tdt) {
 		super();
 		this.resolucion = 	RESOLUCION;
 		this.tdt = TDT;
 	}
-	
 	
 	public Television(double precioBase, int peso) {
 		super(precioBase, peso);
@@ -30,12 +25,13 @@ public class Television extends Electrodomestico {
 		this.tdt = TDT;
 	}
 	
-	public Television(int resolucion, boolean tdt) {
-		super();
-		this.resolucion = 	RESOLUCION;
-		this.tdt = TDT;
-		
+	public Television(double precioBase, String color, char consumoEnergetico, int peso, int resolucion, boolean tdt) {
+		super(precioBase, color, consumoEnergetico, peso);
+		this.resolucion = 	resolucion;
+		this.tdt = tdt;
 	}
+		
+	
 
 	
 	
@@ -62,6 +58,13 @@ public class Television extends Electrodomestico {
 
 		
 		return precioFinal;
+	}
+
+	@Override
+	public String toString() {
+		return "Television: Resolucion= " + resolucion + " Pulgadas "+ ", Sintonizador Tdt=" + tdt + ", Precio Base=" + getPrecioBase()
+				+ ", Color=" + getColor() + ", Consumo Energetico=" + getConsumoEnergetico() + ", Peso="
+				+ getPeso();
 	}
 	
 	
