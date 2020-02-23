@@ -32,9 +32,6 @@ public class Television extends Electrodomestico {
 	}
 		
 	
-
-	
-	
 	// Getters
 	
 	public int getreSolucion() {
@@ -50,16 +47,11 @@ public class Television extends Electrodomestico {
 	public double precioFinal() {
 		double preBase = 0;
 		if (resolucion>40)  {
-			System.out.println(getPrecioBase());
 			preBase+= super.getPrecioBase() * 1.3;
-			System.out.println("Entro a pulgadas > 40: "+ preBase);
 		}
 		if (tdt==true) {
 			preBase+= 50;
-			System.out.println("Entro TDF verdadero " + preBase);
 		}
-
-		
 		return preBase;
 	}
 

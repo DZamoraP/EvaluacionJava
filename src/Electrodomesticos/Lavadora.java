@@ -53,21 +53,15 @@ public class Lavadora extends Electrodomestico {
 
 	
 	
-	
-	
-	
-	
 	// Metodo Calcula que la carga sea mayor o menor a 30
 	public double precioFinal(){
-		int precioRetorno = 0;
+		double precioRetorno = 0;
 		if (carga>=30) {
-			System.out.println("Entro a lavadora Carga mayor a 30 kl");
-			precioRetorno = precioRetorno + 50;
-			System.out.println("Aumento: " + precioRetorno);
+			precioRetorno += super.getPrecioBase() + 50;
+		
 		}else if (carga<30) {
-			System.out.println("Entro a lavadora Carga menor a 30 kl");
-			precioRetorno = precioRetorno + 0;
-			System.out.println("Aumento: " + precioRetorno);
+			precioRetorno += super.getPrecioBase() + 0;
+	
 		}
 		
 		return precioRetorno;
