@@ -48,21 +48,22 @@ public class Television extends Electrodomestico {
 	public double precioFinal() {
 		double preBase = 0;
 		if (resolucion>=40)  {
-			preBase = super.getPrecioBase() * 1.3;
+			preBase = preBase + (super.getPrecioBase() * 1.3);
 		}
 			
 		if (tdt==true) {
-			preBase = super.getPrecioBase()+50;
+			System.out.println("Entramo a sintonizador true");
+			preBase += 50;
 		}
 		
 		if (resolucion<40)  {
-			preBase = super.getPrecioBase();
+			System.out.println("Entramos a < 40");
 		}
 			
 		if (tdt==false) {
-			preBase = super.getPrecioBase();
-		}
+			preBase = super.getPrecioBase() + 0;
 		
+		}
 		
 		return preBase;
 		
