@@ -13,11 +13,11 @@ específicos para cada producto según su categoría.
 
 ## Instrucciones
 
-•Ejecutar clase principal.:trophy:
+•Ejecutar clase principal.:heavy_check_mark:
 
 ## Autores
 
-- Daniel Zamora :shipit: @
+- Daniel Zamora :octocat: @
 
 
 ## Licencia 
