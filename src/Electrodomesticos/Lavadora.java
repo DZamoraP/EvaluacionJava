@@ -1,5 +1,13 @@
 package Electrodomesticos;
 
+
+/**
+ * Clase Lavadora que es hija de Electrodimestico que define los atributos de este objeto ademas de los metodos para calculor
+ * de tipo precio. 
+ * 
+ * @author Daniel Zamora
+ * @version 1.0
+ */
 public class Lavadora extends Electrodomestico {
 	
 	
