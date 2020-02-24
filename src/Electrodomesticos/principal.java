@@ -48,7 +48,7 @@ public class principal {
 		 * Precio Base, Color, Consumo Energetico, Peso,  Resolucion en Pulgadas, Sintonizador TDT.
 		 */
 		listaElectro[7]= new Television(45, "negro", 'A', 41, 61, true);
-		listaElectro[8]= new Television(40, "negro", 'C', 31, 41, true);
+		listaElectro[8]= new Television(40, "naranja", 'C', 31, 41, true);
 		
 		// Precio Base, Peso , otros por defecto
 		listaElectro[9]= new Television(150, 20);

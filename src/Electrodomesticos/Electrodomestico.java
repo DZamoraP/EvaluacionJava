@@ -158,7 +158,7 @@ public class Electrodomestico {
 	 */
 	public double precioFinal() {
 		double precio  = 0;
-		if (this.consumoEnergetico == 'A') {
+		if (consumoEnergetico == 'A') {
 			precio += 100;
 		}else if (consumoEnergetico == 'B') {
 			precio += 80;
