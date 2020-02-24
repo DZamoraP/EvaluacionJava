@@ -26,7 +26,7 @@ public class principal {
 		 */
 		listaElectro[0]= new Electrodomestico(10,"amarillo",'Z',18); 
 		// Datos ingresados de manera incorrecta "amarillo", "Z" para probar metodos de comrpobacion. 
-		listaElectro[1]= new Electrodomestico(40,"blanco",'C',25);
+		listaElectro[1]= new Electrodomestico(40,"negro",'C',25);
 		listaElectro[2]= new Electrodomestico(60,"rojo",'E',60);
 		
 		// Precio Base, Peso, otros datos por defecto

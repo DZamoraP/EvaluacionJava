@@ -30,7 +30,6 @@ public class Electrodomestico {
 	/**
 	 * Atributos
 	 */
-	
 	private double precioBase;
 	private String color;
 	private char consumoEnergetico;
@@ -129,7 +128,8 @@ public class Electrodomestico {
 	 */
 	public char comprobarConsumoEnergetico(){
 		Character.toUpperCase(consumoEnergetico);
-		if (consumoEnergetico!='A' && consumoEnergetico!='F') {
+		if (consumoEnergetico!='A' && consumoEnergetico!='B' && consumoEnergetico!='C' && consumoEnergetico!='D' 
+				&& consumoEnergetico!='E' && consumoEnergetico!='F') {
 			return consumoEnergetico = CONSUMOENERGETICO;
 		}
 		else {
@@ -143,15 +143,12 @@ public class Electrodomestico {
 	 * @return color
 	 */
 	public String comprobarColor() {
-		if (!color.equals("blanco") &&  !color.equals("negro") && !color.equals("rojo") && !color.equals("azul") 
-				&& !color.equals("gris")) {
+		if (color !="blanco" &&  color !="negro" && color !="rojo" && color !="azul" 
+				&& color !="gris") {
 			return color = COLOR;
-		} else {
-		
+		} else {	
 			return this.color;
 		}
-				
-		
 	}
 	
 	/**
@@ -161,7 +158,7 @@ public class Electrodomestico {
 	 */
 	public double precioFinal() {
 		double precio  = 0;
-		if (consumoEnergetico == 'A') {
+		if (this.consumoEnergetico == 'A') {
 			precio += 100;
 		}else if (consumoEnergetico == 'B') {
 			precio += 80;
