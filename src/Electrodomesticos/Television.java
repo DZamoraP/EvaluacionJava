@@ -95,7 +95,7 @@ public class Television extends Electrodomestico {
 	 * 
 	 * @return PreBase.
 	 */
-	public double precioFinal() {
+	protected double precioFinal() {
 		double preBase = 0;
 		if (resolucion>40)  {
 			preBase +=  (super.getPrecioBase() * 0.3);

@@ -126,7 +126,7 @@ public class Electrodomestico {
 	 * 
 	 * @return letra.
 	 */
-	public char comprobarConsumoEnergetico(){
+	protected char comprobarConsumoEnergetico(){
 		Character.toUpperCase(consumoEnergetico);
 		if (consumoEnergetico!='A' && consumoEnergetico!='B' && consumoEnergetico!='C' && consumoEnergetico!='D' 
 				&& consumoEnergetico!='E' && consumoEnergetico!='F') {
@@ -142,7 +142,7 @@ public class Electrodomestico {
 	 * 
 	 * @return color
 	 */
-	public String comprobarColor() {
+	protected String comprobarColor() {
 		if (color !="blanco" &&  color !="negro" && color !="rojo" && color !="azul" 
 				&& color !="gris") {
 			return color = COLOR;
@@ -156,29 +156,29 @@ public class Electrodomestico {
 	 * 
 	 * @return PrecioFinal.
 	 */
-	public double precioFinal() {
+	protected double precioFinal() {
 		double precio  = 0;
-		if (consumoEnergetico == 'A') {
+		if (this.consumoEnergetico == 'A') {
 			precio += 100;
-		}else if (consumoEnergetico == 'B') {
+		}else if (this.consumoEnergetico == 'B') {
 			precio += 80;
-		}else if (consumoEnergetico == 'C') {
+		}else if (this.consumoEnergetico == 'C') {
 			precio += 60;
-		}else if (consumoEnergetico == 'D') {
+		}else if (this.consumoEnergetico == 'D') {
 			precio += 50;
-		}else if (consumoEnergetico == 'E') {
+		}else if (this.consumoEnergetico == 'E') {
 			precio += 30;
-		}else if (consumoEnergetico == 'F') {
+		}else if (this.consumoEnergetico == 'F') {
 			precio += 10;
 		}
 		
-		if (peso >=0 && peso <=19) {
+		if (this.peso >=0 && this.peso <=19) {
 			precio +=  10;
-		} else if (peso >=20 && peso <=49) {
+		} else if (this.peso >=20 && this.peso <=49) {
 			precio += 50;
-		} else if (peso >=50 && peso <=79) {
+		} else if (this.peso >=50 && this.peso <=79) {
 			precio += 80;
-		} else if (peso>=80) {
+		} else if (this.peso>=80) {
 			precio += 100;
 		}
 		

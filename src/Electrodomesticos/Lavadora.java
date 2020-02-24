@@ -79,7 +79,7 @@ public class Lavadora extends Electrodomestico {
 	 * 
 	 * @return PrecioRetorno
 	 */
-	public double precioFinal(){
+	protected double precioFinal(){
 		double precioRetorno = 0;
 		if (carga>=30) {
 			precioRetorno += super.getPrecioBase() + 50;
