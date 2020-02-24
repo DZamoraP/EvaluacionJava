@@ -44,22 +44,34 @@ public class Television extends Electrodomestico {
 	
 	// El metododo
 	
+	//@Override
 	public double precioFinal() {
 		double preBase = 0;
-		if (resolucion>40)  {
-			preBase+= super.getPrecioBase() * 1.3;
+		if (resolucion>=40)  {
+			preBase = super.getPrecioBase() * 1.3;
 		}
+			
 		if (tdt==true) {
-			preBase+= 50;
+			preBase = super.getPrecioBase()+50;
 		}
+		
+		if (resolucion<40)  {
+			preBase = super.getPrecioBase();
+		}
+			
+		if (tdt==false) {
+			preBase = super.getPrecioBase();
+		}
+		
+		
 		return preBase;
+		
 	}
 
 	@Override
 	public String toString() {
-		return "Television: Resolucion= " + resolucion + " Pulgadas "+ ", Sintonizador Tdt=" + tdt + ", Precio Base=" + getPrecioBase()
-				+ ", Color=" + getColor() + ", Consumo Energetico=" + getConsumoEnergetico() + ", Peso="
-				+ getPeso();
+		return "Television: Precio Base= " + getPrecioBase()  + ", Color=" + getColor() +  ", Consumo Energetico=" + getConsumoEnergetico() + ", Peso="
+				+ getPeso() + ", Resolucion= " + resolucion + " Pulgadas "+ ", Sintonizador Tdt=" + tdt;
 	}
 	
 	

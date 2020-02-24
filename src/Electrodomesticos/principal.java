@@ -11,8 +11,7 @@ public class principal {
 		// Datos Electrodimesticos:
 		// Precio Base, Color, Consumo Energetico, Peso
 		listaElectro[0]= new Electrodomestico(10,"negro",'A',18);
-		listaElectro[1]= new Electrodomestico(10,"negro",'A',18);
-		//listaElectro[1]= new Electrodomestico(40,"blanco",'C',25);
+		listaElectro[1]= new Electrodomestico(40,"blanco",'C',25);
 		listaElectro[2]= new Electrodomestico(60,"rojo",'E',60);
 		
 		// Precio Base, Peso, otros datos por defecto
@@ -51,30 +50,32 @@ public class principal {
         for(int i=0;i<listaElectro.length;i++){
         	
          
-        	// Objeto 			intanceof	     Clase
+        	// Preguntamos si la lista es una instancia de un objeto determinado. 
  
             if(listaElectro[i] instanceof Electrodomestico){
             	double preciPorElectro = 0;
-            	System.out.println(preciPorElectro);
                 precioTotalElectro+=listaElectro[i].precioFinal();
                 preciPorElectro = listaElectro[i].precioFinal();
                 System.out.println("El Precio del Electrodomestico: " + preciPorElectro);
-                System.out.println(preciPorElectro);
+               
                 
             }
-//            if(listaElectro[i] instanceof Lavadora){
-//            	double preciPorElectro = 0;
-//                precioTotalLava+=listaElectro[i].precioFinal();
-//                preciPorElectro = precioTotalLava;
-//                System.out.println("El Precio de la Lavadora: " + preciPorElectro);
-//            }
-//            
-//            if(listaElectro[i] instanceof Television){
-//            	double preciPorElectro = 0;
-//                precioTotalTele+=listaElectro[i].precioFinal();
-//                preciPorElectro = precioTotalTele;
-//                System.out.println("El Precio del Television: " + preciPorElectro);
-//            }
+            if(listaElectro[i] instanceof Lavadora){
+            	double preciPorElectro = 0;
+                precioTotalLava+=listaElectro[i].precioFinal();
+                preciPorElectro = listaElectro[i].precioFinal();
+                System.out.println("El Precio de la Lavadora: " + preciPorElectro);
+            
+            }
+            
+            if(listaElectro[i] instanceof Television){
+            	double preciPorElectro = 0;
+                precioTotalTele+=listaElectro[i].precioFinal();
+                preciPorElectro = listaElectro[i].precioFinal();
+                System.out.println("El Precio del Television: " + preciPorElectro);
+                
+            }
+            System.out.println("");
         }
         
         
