@@ -57,7 +57,7 @@ public class principal {
 		/**
 		 * Iteracion for para recorrer y mostrar los valores que se añadiron en el arreglo.
 		 */
-	 
+
 		for (int i=0; i<listaElectro.length;i++) {
 			listaElectro[i].comprobarColor();
 		
