@@ -13,7 +13,11 @@
 
 package Electrodomesticos;
 
-
+/**
+ * Clase padre	que definira atributos comunes de todos los tipos de electrodomesticos
+ * @author Daniel Zamora
+ * @version 1.0
+ */
 public class Electrodomestico {
 	
 	
@@ -33,15 +37,13 @@ public class Electrodomestico {
 	private int peso;
 		
 	 /**
-     * Constructor por defect con 4 parametros
+     * Constructor por defecto con 4 parametros
      * @param precioBase  precio del electrodomestico
      * @param color  define color del electrodomestico
      * @param consumoEnergetico define el consumo entre A y F
      * @param peso define el peso del electrodomestico
      */
-	
 	public  Electrodomestico() {
-	
 		this.precioBase = PRECIOBASE;
 		this.color = COLOR;
 		this.consumoEnergetico = CONSUMOENERGETICO;
@@ -55,9 +57,7 @@ public class Electrodomestico {
  	* @param consumoEnergetico define el consumo entre A y F por defecto como F
  	* @param peso define el peso del electrodomestico en base a atributo constante
  	*/
-	
 	public Electrodomestico(double precioBase, int peso) {
-		
 		this.precioBase = precioBase;
 		this.color = COLOR;
 		this.consumoEnergetico = CONSUMOENERGETICO;
@@ -65,11 +65,9 @@ public class Electrodomestico {
 	}
 	
 	/**
-	 * Constructor con todos los atributos.
+	 * Constructor con todos los atributos heredados.
 	 */
-		
 	public Electrodomestico(double precioBase, String color, char consumoEnergetico, int peso) {
-		
 		this.precioBase = precioBase;
 		this.color = color;
 		this.consumoEnergetico = consumoEnergetico;
@@ -82,36 +80,53 @@ public class Electrodomestico {
 	 */
 	
 	
-	
+	/**
+	 * Obtiente el Precio Base del Electrodomestico.
+	 * 
+	 * @return precioBase. Retorna PrecioBase del Electrodomestico.
+	 */
 	public double getPrecioBase() {
 		return precioBase;
 	}
 
 
-
-
+	/**
+	 * Obtiente el Color del Electrodomestico.
+	 * 
+	 * @return Color. Retorna color del Electrodomestico.
+	 */
 	public String getColor() {
 		return color;
 	}
 
 
-
+	/**
+	 * Obtiente el Consumo Energetico del Electrodomestico.
+	 * 
+	 * @return ConsumoEnergetico. Retorna Consumo Energetico del Electrodomestico.
+	 */
 	public char getConsumoEnergetico() {
 		return consumoEnergetico;
 	}
 
 
-
-
+	/**
+	 * Obtiente el Peso del Electrodomestico.
+	 * 
+	 * @return peso. Retorna el peso del Electrodomestico.
+	 */
 	public int getPeso() {
 		return peso;
 	}
 
 
-	/**
-	 * Metodos de la Clase 
-	 */	
+	// Metodos de la Clase Electrodomestico
 	
+	/**
+	 * Metodo que comprueba el Consumo Energetico sea una letra entre A y F.
+	 * 
+	 * @return letra.
+	 */
 	public char comprobarConsumoEnergetico(char letra){
 		Character.toUpperCase(letra);
 		if (letra!='A' && letra!='F') {
@@ -122,9 +137,12 @@ public class Electrodomestico {
 		}
 	}
 	
-
-
-	public String comprobarColor(String color) {
+	/**
+	 * Metodo que comprueba el Color del electrodomestivo.
+	 * 
+	 * @return color
+	 */
+	public String comprobarColor() {
 		if (!color.equals("blanco") &&  !color.equals("negro") && !color.equals("rojo") && !color.equals("azul") 
 				&& !color.equals("gris")) {
 			return COLOR;
@@ -135,7 +153,11 @@ public class Electrodomestico {
 		
 	}
 	
-	
+	/**
+	 * Metodo que segun el consumo energetico y el peso calcula el precio final.
+	 * 
+	 * @return PrecioFinal.
+	 */
 	public double precioFinal() {
 		double precio  = 0;
 		if (consumoEnergetico == 'A') {
@@ -165,7 +187,11 @@ public class Electrodomestico {
 		return precioBase + precio;
 	}
 
-	
+	/**
+	 * Metodo toString
+	 * 
+	 * @return Muestra toString de Electrodomestico
+	 */
 	@Override
 	public String toString() {
 		return "Electrodomestico: Precio Base=" + precioBase + ", color=" + color + ", Consumo Energetico="

@@ -52,12 +52,12 @@ public class Television extends Electrodomestico {
 		}
 			
 		if (tdt==true) {
-			System.out.println("Entramo a sintonizador true");
+	
 			preBase += 50;
 		}
 		
 		if (resolucion<40)  {
-			System.out.println("Entramos a < 40");
+
 		}
 			
 		if (tdt==false) {
