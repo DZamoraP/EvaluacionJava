@@ -127,27 +127,28 @@ public class Electrodomestico {
 	 * 
 	 * @return letra.
 	 */
-	public char comprobarConsumoEnergetico(char letra){
-		Character.toUpperCase(letra);
-		if (letra!='A' && letra!='F') {
-			return CONSUMOENERGETICO;
+	public char comprobarConsumoEnergetico(){
+		Character.toUpperCase(consumoEnergetico);
+		if (consumoEnergetico!='A' && consumoEnergetico!='F') {
+			return consumoEnergetico = CONSUMOENERGETICO;
 		}
 		else {
-			return letra;
+			return consumoEnergetico;
 		}
 	}
 	
 	/**
-	 * Metodo que comprueba el Color del electrodomestivo.
+	 * Metodo que comprueba el Color del electrodomestico.
 	 * 
 	 * @return color
 	 */
 	public String comprobarColor() {
 		if (!color.equals("blanco") &&  !color.equals("negro") && !color.equals("rojo") && !color.equals("azul") 
 				&& !color.equals("gris")) {
-			return COLOR;
+			return color = COLOR;
 		} else {
-			return color;
+		
+			return this.color;
 		}
 				
 		

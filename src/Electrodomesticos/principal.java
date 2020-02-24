@@ -13,7 +13,7 @@ public class principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
+
 		/**
 		 * Arreglo de Clase Electrodomesticos 
 		 */
@@ -24,7 +24,7 @@ public class principal {
 		 * Arreglo de Clase Electrodomesticos con valores de electrodomestico
 		 * Precio Base, Color, Consumo Energetico, Peso
 		 */
-		listaElectro[0]= new Electrodomestico(10,"negro",'A',18);
+		listaElectro[0]= new Electrodomestico(10,"negro",'Z',18);
 		listaElectro[1]= new Electrodomestico(40,"blanco",'C',25);
 		listaElectro[2]= new Electrodomestico(60,"rojo",'E',60);
 		
@@ -56,8 +56,17 @@ public class principal {
 		 * Iteracion for para recorrer y mostrar los valores que se añadiron en el arreglo.
 		 */
 		for (int i=0; i<listaElectro.length;i++) {
+			listaElectro[i].comprobarColor();
+			listaElectro[i].comprobarConsumoEnergetico();
 			System.out.println(listaElectro[i]);
 		}
+		
+		// llamado a metodo para comprabar si color es correcto
+	
+		
+		
+		
+		// 
 		
 		
 		double precioTotalElectro=0;
@@ -82,6 +91,7 @@ public class principal {
     		 */
  
             if(listaElectro[i] instanceof Electrodomestico){
+            	
             	double preciPorElectro = 0;
                 precioTotalElectro+=listaElectro[i].precioFinal();
                 preciPorElectro = listaElectro[i].precioFinal();
