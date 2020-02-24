@@ -34,7 +34,12 @@ public class Electrodomestico {
 	private String color;
 	private char consumoEnergetico;
 	private int peso;
-		
+	
+	/**
+	 * Constructor con todos los atributos heredados.
+	 */
+	
+	
 	 /**
      * Constructor por defecto con 4 parametros
      * @param precioBase  precio del electrodomestico
@@ -72,6 +77,9 @@ public class Electrodomestico {
 		this.consumoEnergetico = consumoEnergetico;
 		this.peso = peso;
 	}
+	
+
+	
 	
 	
 	/**

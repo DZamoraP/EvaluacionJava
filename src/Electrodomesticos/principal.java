@@ -13,10 +13,11 @@ public class principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-
+		
 		/**
 		 * Arreglo de Clase Electrodomesticos 
 		 */
+
 		Electrodomestico listaElectro[] = new Electrodomestico[10];
 	
 	
@@ -58,6 +59,7 @@ public class principal {
 		 */
 		for (int i=0; i<listaElectro.length;i++) {
 			listaElectro[i].comprobarColor();
+		
 			listaElectro[i].comprobarConsumoEnergetico();
 			System.out.println(listaElectro[i]);
 		}
